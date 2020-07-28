@@ -1,8 +1,5 @@
 const test = require('ava');
 
-test.todo('we currently get a MODULE_NOT_FOUND when these tests run');
-
-/*
 const sinon = require('sinon');
 const proxyquire = require('proxyquire');
 const { factory } = require('factory-girl');
@@ -32,7 +29,7 @@ test.before(async (t) => {
   // stub policies in routes/web/otp
   t.context.ensureLoggedIn = sinon.stub(policies, 'ensureLoggedIn');
   proxyquire('../../routes/web', {
-    '../../helpers': {
+    '../../helpers/policies': {
       policies
     }
   });
@@ -341,4 +338,3 @@ test('POST otp/keys > recovery keys reset', async (t) => {
   t.is(res.header.location, '/en/my-account/security');
   t.true(user[config.userFields.otpRecoveryKeys] !== null);
 });
-*/
